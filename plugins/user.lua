@@ -9,4 +9,7 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "plugins" },
 }
