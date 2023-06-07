@@ -9,7 +9,12 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "plugins" },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      setup = {
+        clangd = function(_, opts) opts.capabilities.offsetEncoding = { "utf-16" } end,
+      },
+    },
+  },
 }
